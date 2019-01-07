@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77382a60-2ef7-4282-af01-33aa3073a128" name="Default Changelist" comment="" />
+    <list default="true" id="77382a60-2ef7-4282-af01-33aa3073a128" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/proxy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/bmh.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,55 +16,93 @@
     <session id="-41815409">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="py" value="2" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="1" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Python" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6349" />
+          <entry key="dummy" value="7" />
+          <entry key="gitignore" value="7" />
+          <entry key="py" value="10920" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6349" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Python" value="10920" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/run.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bmh.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
+            <state relative-caret-position="213">
+              <caret line="207" column="53" lean-forward="true" selection-start-line="207" selection-start-column="53" selection-end-line="207" selection-end-column="53" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1546684416518" expanded="true" signature="492:493" ph="..." />
-                <marker date="1546684416518" expanded="true" signature="1186:1753" ph="..." />
-                <marker date="1546684416518" expanded="true" signature="1934:2004" ph="..." />
-                <marker date="1546684416518" expanded="true" signature="3942:6793" ph="..." />
-                <marker date="1546684416518" expanded="true" signature="4595:6793" ph="..." />
-                <marker date="1546684416518" expanded="true" signature="6585:6793" ph="..." />
-                <marker date="1546684416518" expanded="true" signature="6819:6824" ph="..." />
+                <marker date="1546685940762" expanded="true" signature="492:493" ph="..." />
+                <marker date="1546685940762" expanded="true" signature="1186:1753" ph="..." />
+                <marker date="1546685940762" expanded="true" signature="1934:2004" ph="..." />
+                <marker date="1546685940762" expanded="true" signature="3942:6982" ph="..." />
+                <marker date="1546685940762" expanded="true" signature="4703:6982" ph="..." />
+                <marker date="1546685940762" expanded="true" signature="6774:6982" ph="..." />
+                <marker date="1546685940762" expanded="true" signature="7008:7013" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/proxy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="82" column="75" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1546805997820" expanded="true" signature="1028:1123" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="1182:1187" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="2014:2019" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="3780:3781" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="3780:4160" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="4188:4193" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="4188:4260" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="4289:4294" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="4289:4361" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="4446:4451" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="4446:4815" ph="..." />
+                <marker date="1546805997820" expanded="true" signature="4854:6792" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -79,12 +121,24 @@
       <find>socket</find>
       <find>sys.stdin()</find>
       <find>%</find>
+      <find>Server s</find>
+      <find>USAGE</find>
+      <find>usa</find>
+      <find>print</find>
+      <find>hexdump</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/venv/proxy.py" />
+        <option value="$PROJECT_DIR$/bmh.py" />
+        <option value="$PROJECT_DIR$/proxy.py" />
       </list>
     </option>
   </component>
@@ -93,6 +147,7 @@
     <option name="width" value="1366" />
     <option name="height" value="739" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -114,6 +169,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -141,10 +201,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26323217" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122114666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -155,7 +214,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3775773" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.31655845" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -167,29 +226,50 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data2.txt">
+    <entry file="file://$PROJECT_DIR$/data.txt" />
+    <entry file="file://$PROJECT_DIR$/data2.txt" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13884">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
+    <entry file="file://$PROJECT_DIR$/bmh.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="86" column="12" selection-start-line="86" selection-start-column="12" selection-end-line="86" selection-end-column="12" />
+        <state relative-caret-position="213">
+          <caret line="207" column="53" lean-forward="true" selection-start-line="207" selection-start-column="53" selection-end-line="207" selection-end-column="53" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1546684416518" expanded="true" signature="492:493" ph="..." />
-            <marker date="1546684416518" expanded="true" signature="1186:1753" ph="..." />
-            <marker date="1546684416518" expanded="true" signature="1934:2004" ph="..." />
-            <marker date="1546684416518" expanded="true" signature="3942:6793" ph="..." />
-            <marker date="1546684416518" expanded="true" signature="4595:6793" ph="..." />
-            <marker date="1546684416518" expanded="true" signature="6585:6793" ph="..." />
-            <marker date="1546684416518" expanded="true" signature="6819:6824" ph="..." />
+            <marker date="1546685940762" expanded="true" signature="492:493" ph="..." />
+            <marker date="1546685940762" expanded="true" signature="1186:1753" ph="..." />
+            <marker date="1546685940762" expanded="true" signature="1934:2004" ph="..." />
+            <marker date="1546685940762" expanded="true" signature="3942:6982" ph="..." />
+            <marker date="1546685940762" expanded="true" signature="4703:6982" ph="..." />
+            <marker date="1546685940762" expanded="true" signature="6774:6982" ph="..." />
+            <marker date="1546685940762" expanded="true" signature="7008:7013" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/proxy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="82" column="75" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1546805997820" expanded="true" signature="1028:1123" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="1182:1187" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="2014:2019" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="3780:3781" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="3780:4160" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="4188:4193" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="4188:4260" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="4289:4294" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="4289:4361" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="4446:4451" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="4446:4815" ph="..." />
+            <marker date="1546805997820" expanded="true" signature="4854:6792" ph="..." />
           </folding>
         </state>
       </provider>

@@ -119,18 +119,19 @@ def serverLoop():
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server.bind((target, port))
         server.listen(5)
-        print(bcolors.OKBLUE + 'Server starts on port %d'% port)
+        print(bcolors.OKGREEN + 'Server starts on port %d'% port)
     except Exception as ex:
         showError(ex)
 
     while True:
         client_socket, addr = server.accept()
         users_cnt += 1
+        print(bcolors.OKBLUE + 'Received incoming connection from %s:%d' % (addr[0], addr[1]))
         print(bcolors.BOLD + 'There are %s users now' % users_cnt + bcolors.ENDC)
-        client_thread = threading.Thread(target=clientHandler, args=(client_socket,))
+        client_thread = threading.Thread(target=clientHandler, args=(client_socket, addr,))
         client_thread.start()
 
-def clientHandler(client_socket):
+def clientHandler(client_socket, addr):
     global upload, execute, command, upload_destination, users_cnt
     # check for upload file
     if len(upload_destination):
@@ -185,6 +186,7 @@ def clientHandler(client_socket):
             showError(e)
 
     users_cnt -= 1
+    print(bcolors.OKBLUE + 'Connection stopped with %s:%d' % (addr[0], addr[1]))
     print(bcolors.BOLD + 'There are %s users now' % users_cnt + bcolors.ENDC)
 
 def runCommand(command):
