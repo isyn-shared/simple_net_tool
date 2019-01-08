@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 import socket
 import threading
@@ -23,10 +24,17 @@ def showLogo():
     print(bcolors.HEADER + " | |\___ \\\\ V /|  \| | \___ \ / _ \| |_| __\ \ /\ / / _` | '__/ _ \\" + bcolors.ENDC)
     print(bcolors.HEADER + " | | ___) || | | |\  |  ___) | (_) |  _| |_ \ V  V / (_| | | |  __/" + bcolors.ENDC)
     print(bcolors.HEADER + "|___|____/ |_| |_| \_| |____/ \___/|_|  \__| \_/\_/ \__,_|_|  \___|" + bcolors.ENDC)
-    print(bcolors.TITLE + "                               PROXY                                " + bcolors.ENDC)
+    print(bcolors.TITLE + "                               PROXY                               " + bcolors.ENDC)
 
 def usage():
     print('\n                              ' + bcolors.UNDERLINE + "USAGE\n" + bcolors.ENDC)
+    print('-l--lHost                       set the localHost [required]')
+    print('-p--lPort                       set the localPort [required]')
+    print('-r--rHost                       set the remoteHost [required]')
+    print('-q--rPort                       set the remotePort [required]')
+    print('-f--recieve-first               set if recieve first')
+    print('-x--hexdump                     set if you want to see the hexdump')
+    print('-t--timeout                     set timeout for connections')
 
 def server_loop(lHost, lPort, rHost, rPort, receive_first):
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -54,31 +62,31 @@ def proxy_handler(client_socket, rHost, rPort, receive_first):
 
     if receive_first:
         remote_buffer = receive_from(remote_socket)
-        print(hexdump(bytes(remote_buffer, 'utf-8', errors='ignore')))
+        print(hexdump(remote_buffer))
 
         remote_buffer = response_handler(remote_buffer)
 
         if len(remote_buffer):
             print(bcolors.OKBLUE + '[==>] Sending %d bytes to localhost' % len(remote_buffer) + bcolors.ENDC)
-            client_socket.send(bytes(remote_buffer, 'utf-8', errors='ignore'))
+            client_socket.send(remote_buffer)
 
     while True:
         local_buffer = receive_from(client_socket)
         if len(local_buffer):
             print(bcolors.OKBLUE + '[<==] Received %d bytes from localhost' % len(local_buffer) + bcolors.ENDC)
-            print(hexdump(bytes(local_buffer, 'utf-8')))
+            print(hexdump(local_buffer))
 
-            local_buffer = request_handler(bytes(local_buffer, 'utf-8', errors='ignore'))
+            local_buffer = request_handler(local_buffer)
             remote_socket.send(local_buffer)
             print(bcolors.OKBLUE + '[==>] Sent to remote')
 
         remote_buffer = receive_from(remote_socket)
         if len(remote_buffer):
             print(bcolors.OKBLUE + '[<==] Received %d byted from remote' % len(remote_buffer) + bcolors.ENDC)
-            print(hexdump(bytes(remote_buffer, 'utf-8', errors='ignore')))
+            print(hexdump(remote_buffer))
 
             remote_buffer = response_handler(remote_buffer)
-            client_socket.send(bytes(remote_buffer, 'utf-8', errors='ignore'))
+            client_socket.send(remote_buffer)
 
             print(bcolors.OKBLUE + '[==>] Sent to localhost' + bcolors.ENDC)
         if not len(local_buffer) or not len(remote_buffer):
@@ -88,17 +96,17 @@ def proxy_handler(client_socket, rHost, rPort, receive_first):
             break
 
 def receive_from(connection):
-    buffer = ""
+    buffer = bytes()
     connection.settimeout(TIMEOUT)
 
     try:
         while True:
-            data = connection.recv(1024)
-            buffer += str(data, 'utf-8', errors='ignore')
-            if len(data) < 1024:
+            data = connection.recv(4096)
+            buffer += data
+            if len(data) < 4096:
                 break
     except Exception as ex:
-        print(bcolors.WARNING + '[!] Error when receive data {' + str(ex) + '}' + bcolors.ENDC)
+        print(bcolors.WARNING + '[!] When receive data {' + str(ex) + '}' + bcolors.ENDC)
 
     return buffer
 
@@ -120,6 +128,7 @@ def hexdump(src, length=16):
         return ''
     result = []
     digits = 4 if isinstance(src, str) else 2
+
     for i in range(0, len(src), length):
         s = src[i:i+length]
         hexa = ' '.join(map('{0:0>2X}'.format, s))
@@ -132,7 +141,7 @@ def main():
     showLogo()
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:], 'l:p:r:q:ft:h',
+        opts, args = getopt.getopt(sys.argv[1:], 'l:p:r:q:ft:x',
                         ['localHost', 'localPort', 'remoteHost', 'remotePort', 'recieve_first', 'timeout', 'hexdump'])
     except getopt.GetoptError as err:
         print(bcolors.FAIL + '[!!] ' + str(err) + bcolors.ENDC)
@@ -170,7 +179,7 @@ def main():
             except ValueError as err:
                 print(bcolors.FAIL + '           [!!!] Timeout must be a number value (' + str(err) + ')' + bcolors.ENDC)
                 sys.exit(2)
-        elif o in ('-h', '--hexdump'):
+        elif o in ('-x', '--hexdump'):
             HEXDUMP = True
 
     if not localPort or not localHost or not remoteHost or not remotePort:
